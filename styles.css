@@ -111,4 +111,22 @@ footer \{\
   color: white;\
 \}\
 \
+}.services-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-item p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
 }
