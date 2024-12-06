@@ -1,131 +1,73 @@
-/* إعدادات عامة */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #f8f9fa;
+  background-color: #f9f9f9;
 }
 
-/* رأس الصفحة */
 header {
-  background: linear-gradient(to right, #4c4c4c, #1f1f1f);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.header-content h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.header-content p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-/* قائمة التنقل */
-nav {
   background: #333;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 10px 0;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* الأقسام */
-section {
-  padding: 40px 20px;
-  margin: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  text-align: center;
-  color: #333;
-}
-
-section p, section ul {
-  text-align: center;
-  font-size: 16px;
-}
-
-/* قائمة الخدمات */
-.services-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.services-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.services-list li:last-child {
-  border-bottom: none;
-}
-
-/* النموذج */
 form {
   max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-  margin-top: 10px;
-  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
 }
 
 form input, form select, form button {
+  width: 100%;
   padding: 10px;
-  margin-top: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 form button {
-  background: #4c4c4c;
+  background: #333;
   color: white;
   cursor: pointer;
-  border: none;
 }
 
 form button:hover {
-  background: #333;
+  background: #555;
 }
 
-/* التذييل */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #1f1f1f;
+#records ul {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+#records li {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#records li button {
+  background: red;
   color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
