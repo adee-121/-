@@ -3,47 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>خدمات المساج التايلندي</title>
+  <title>نموذج حجز</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <h1>خدمات المساج التايلندي</h1>
-      <p>راحة تامة وعناية فائقة بجسمك وعقلك</p>
-    </div>
+    <h1>خدمات المساج التايلندي</h1>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#services">الخدمات</a></li>
-      <li><a href="#booking">احجز الآن</a></li>
-      <li><a href="#contact">تواصل معنا</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>
-      نحن فريق محترف متخصص في تقديم خدمات المساج التايلندي. نؤمن بأن الاسترخاء والعناية بالجسم
-      هو سر السعادة والصحة. نهدف إلى جعل حياتك أكثر راحة وسلامًا.
-    </p>
-  </section>
-
-  <section id="services">
-    <h2>الخدمات المتوفرة</h2>
-    <ul class="services-list">
-      <li>مساج تايلندي تقليدي</li>
-      <li>مساج استرخائي بالزيوت العطرية</li>
-      <li>جلسات عناية بالقدمين</li>
-      <li>جلسات شياتسو لتخفيف التوتر</li>
-    </ul>
-  </section>
 
   <section id="booking">
     <h2>احجز موعدك</h2>
-    <form>
+    <form id="booking-form">
       <label for="name">الاسم:</label>
       <input type="text" id="name" name="name" required>
 
@@ -65,11 +35,11 @@
     </form>
   </section>
 
-  <footer id="contact">
-    <h2>تواصل معنا</h2>
-    <p>للتواصل: 123-456-789</p>
-    <p>البريد الإلكتروني: info@massage.com</p>
-    <p>جميع الحقوق محفوظة © 2024</p>
-  </footer>
+  <section id="records">
+    <h2>سجلات الحجز</h2>
+    <ul id="booking-records"></ul>
+  </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
