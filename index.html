@@ -1,13 +1,75 @@
-<section id="services">
-  <h2>الخدمات المتوفرة</h2>
-  <div class="services-gallery">
-    <div class="service-item">
-      <img src="image1.jpg" alt="مساج تايلندي">
-      <p>مساج تايلندي تقليدي</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدمات المساج التايلندي</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>خدمات المساج التايلندي</h1>
+    <p>أفضل خدمات الاسترخاء والعناية بالجسم</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#booking">احجز الآن</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <section id="services">
+    <h2>الخدمات المتوفرة</h2>
+    <div class="services-gallery">
+      <div class="service-item">
+        <img src="images/massage-thai.jpg" alt="مساج تايلندي">
+        <p>مساج تايلندي تقليدي</p>
+      </div>
+      <div class="service-item">
+        <img src="images/massage-relax.jpg" alt="مساج استرخائي">
+        <p>مساج استرخائي بالزيوت العطرية</p>
+      </div>
+      <div class="service-item">
+        <img src="images/massage-foot.jpg" alt="عناية بالقدمين">
+        <p>جلسات عناية بالقدمين</p>
+      </div>
+      <div class="service-item">
+        <img src="images/massage-shiatsu.jpg" alt="شياتسو">
+        <p>جلسات شياتسو لتخفيف التوتر</p>
+      </div>
     </div>
-    <div class="service-item">
-      <img src="image2.jpg" alt="مساج استرخائي">
-      <p>مساج استرخائي بالزيوت العطرية</p>
-    </div>
-  </div>
-</section>
+  </section>
+
+  <section id="booking">
+    <h2>احجز موعدك</h2>
+    <form>
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">رقم الهاتف:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="service">اختر الخدمة:</label>
+      <select id="service" name="service" required>
+        <option value="thai-massage">مساج تايلندي</option>
+        <option value="relaxation">مساج استرخائي</option>
+        <option value="foot-care">عناية بالقدمين</option>
+        <option value="shiatsu">شياتسو</option>
+      </select>
+
+      <label for="date">التاريخ:</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit">احجز الآن</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <p>للتواصل: 123-456-789</p>
+    <p>البريد الإلكتروني: info@massage.com</p>
+    <p>جميع الحقوق محفوظة © 2024</p>
+  </footer>
+</body>
+</html>
