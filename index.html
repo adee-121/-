@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نموذج حجز</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منال للاستشارات</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .service {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .service h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        .service p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .contact-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>خدمات المساج التايلندي</h1>
-  </header>
+    <header>
+        <h1>منال للاستشارات</h1>
+        <p>نقدم لك أفضل الحلول والاستشارات في مختلف المجالات</p>
+    </header>
 
-  <section id="booking">
-    <h2>احجز موعدك</h2>
-    <form id="booking-form">
-      <label for="name">الاسم:</label>
-      <input type="text" id="name" name="name" required>
+    <div class="container">
+        <div class="service">
+            <h2>استشارات قانونية</h2>
+            <p>نساعدك في فهم القوانين والإجراءات القانونية التي تحتاجها لاتخاذ القرارات الصحيحة.</p>
+        </div>
 
-      <label for="phone">رقم الهاتف:</label>
-      <input type="tel" id="phone" name="phone" required>
+        <div class="service">
+            <h2>استشارات مالية</h2>
+            <p>نوفر حلولاً لإدارة أموالك واستثمارها بطرق مضمونة وآمنة.</p>
+        </div>
 
-      <label for="service">اختر الخدمة:</label>
-      <select id="service" name="service" required>
-        <option value="thai-massage">مساج تايلندي</option>
-        <option value="relaxation">مساج استرخائي</option>
-        <option value="foot-care">عناية بالقدمين</option>
-        <option value="shiatsu">شياتسو</option>
-      </select>
+        <div class="service">
+            <h2>استشارات أسرية</h2>
+            <p>نقدم نصائح واستراتيجيات لحل النزاعات الأسرية وتحسين التواصل بين أفراد العائلة.</p>
+        </div>
 
-      <label for="date">التاريخ:</label>
-      <input type="date" id="date" name="date" required>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="tel:0501234567" class="contact-btn">اتصل بنا الآن</a>
+        </div>
+    </div>
 
-      <button type="submit">احجز الآن</button>
-    </form>
-  </section>
-
-  <section id="records">
-    <h2>سجلات الحجز</h2>
-    <ul id="booking-records"></ul>
-  </section>
-
-  <script src="app.js"></script>
+    <footer>
+        <p>© 2024 منال للاستشارات | للتواصل: 0501234567</p>
+    </footer>
 </body>
 </html>
