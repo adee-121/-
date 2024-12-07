@@ -1,1 +1,7 @@
+from flask import Blueprint
+from src.routes.main_routes import main_bp
+
+def register_routes(app):
+    # تسجيل البلوبرنت (Blueprint) في التطبيق
+    app.register_blueprint(main_bp)
 
