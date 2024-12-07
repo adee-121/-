@@ -1,19 +1,11 @@
-from flask import Blueprint
-from src.routes.main_routes import main_bp
+from flask import Blueprint, render_template
 
-def register_routes(app):
-    # تسجيل البلوبرنت (Blueprint) في التطبيق
-    app.register_blueprint(main_bp)
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h1>About Us</h1>
-    <p>This is the about page of your application.</p>
-</body>
-</html>
+main_bp = Blueprint('main', __name__)
 
+@main_bp.route("/")
+def home():
+    return render_template("home.html", title="Home")
+
+@main_bp.route("/about")
+def about():
+    return render_template("about.html", title="About Us")
