@@ -4,4 +4,16 @@ from src.routes.main_routes import main_bp
 def register_routes(app):
     # تسجيل البلوبرنت (Blueprint) في التطبيق
     app.register_blueprint(main_bp)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>This is the about page of your application.</p>
+</body>
+</html>
 
