@@ -1,0 +1,55 @@
+from flask import Flask, render_template, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+import os
+
+# تهيئة التطبيق
+app = Flask(__name__)
+
+# إعدادات قاعدة البيانات
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(BASE_DIR, "ecommerce.db")}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# تهيئة قاعدة البيانات
+db = SQLAlchemy(app)
+
+# نموذج لجدول المنتجات
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=True)
+    price = db.Column(db.Float, nullable=False)
+    stock = db.Column(db.Integer, default=0)
+    image_url = db.Column(db.String(255), nullable=True)
+
+    def __repr__(self):
+        return f"<Product {self.name}>"
+
+# المسار الرئيسي
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+# واجهة API لجلب المنتجات
+@app.route('/api/products', methods=['GET'])
+def get_products():
+    products = Product.query.all()
+    products_list = [
+        {
+            "id": product.id,
+            "name": product.name,
+            "description": product.description,
+            "price": product.price,
+            "stock": product.stock,
+            "image_url": product.image_url
+        }
+        for product in products
+    ]
+    return jsonify(products_list)
+
+# تشغيل التطبيق
+if __name__ == '__main__':
+    # إنشاء قاعدة البيانات إذا لم تكن موجودة
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
